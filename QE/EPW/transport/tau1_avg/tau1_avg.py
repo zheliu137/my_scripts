@@ -59,8 +59,6 @@ np.savetxt('avg_tot.dat', total_avg.T, fmt='%.4e', newline='\n')
 # Plotting the results
 plt.figure(figsize=(10, 6))
 plt.plot(e0_values, results1, label='0meV')
-#plt.plot(e0_values-0.025, results2, label='-25meV')
-#plt.plot(e0_values+0.025, results3, label='25meV')
 plt.plot(e0_values, results2, label='-25meV')
 plt.plot(e0_values, results3, label='25meV')
 plt.xlim(-0.1, 0.1)
@@ -68,7 +66,6 @@ plt.xlim(-0.1, 0.1)
 #plt.yscale('log')  # Set the y-axis to logarithmic scale
 plt.xlabel('E-E_f(eV)')
 plt.ylabel('Tau_avg ')
-#plt.title('Log-Scale Sum of f_i * delta_sigma(e_i - e0) for Three Energy Offsets')
 plt.legend()
 plt.grid(True, which="both", ls="--")  # Enhance grid visibility for log scale
 plt.show()
